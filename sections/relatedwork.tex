@@ -151,7 +151,19 @@ Deep learning architectures like LSTM, GRU, and BiGRU excel at both — modeling
     \end{block}
 
     \begin{exampleblock}{Research Gap}
-        This study evaluates whether hybrid deep learning architectures (LSTM–BiGRU) provide meaningful improvements in predicting highly volatile, underexplored stocks like \textbf{Workday Inc. (WDAY)}.
+        \centering
+        \resizebox{0.7\linewidth}{!}{%
+        \begin{tabular}{lccc}
+            \hline
+            \textbf{Company} & \textbf{Market Cap (USD)} & \textbf{P/E Ratio} & \textbf{EPS (USD)} \\
+            \hline\hline
+            S\&P 500    & $\approx$ 50 T & 24.0   & 266   \\
+            Microsoft   & 2.79 T         & 28.88  & 12.93 \\
+            Alphabet    & 1.88 T         & 16.91  & 9.15  \\
+            \alert{Workday} & \alert{61.97 B} & \alert{38.25} & \alert{6.09} \\
+            \hline
+        \end{tabular}
+        }
     \end{exampleblock}
 
     \note{
@@ -163,6 +175,11 @@ Deep learning architectures like LSTM, GRU, and BiGRU excel at both — modeling
 
         This research aims to investigate whether hybrid architectures genuinely offer better generalization and 
         robustness in these noisier, low-information settings, which are common but underexplored in financial
-        forecasting studies.
+        forecasting studies.    Compared to Microsoft and Alphabet—two mega-cap companies with multi-trillion-dollar valuations—Workday is significantly smaller, with a market cap of only \$61.97 billion. This makes Microsoft roughly 45 times larger and Alphabet over 30 times larger than Workday.
+
+    Workday also exhibits a notably higher P/E ratio (38.25) compared to Microsoft (28.88) and Alphabet (16.91), indicating that investors are pricing in stronger future growth despite lower current earnings. However, its earnings per share (EPS) of 6.09 is substantially lower than Microsoft's (12.93) and Alphabet’s (9.15), highlighting its comparatively limited profitability at present.
+
+    These differences suggest that forecasting Workday’s stock is inherently more difficult due to its smaller size, higher volatility, and less stable earnings. This justifies its selection as a more rigorous and informative benchmark for evaluating the generalization and robustness of sequence-based models like LSTM and LSTM–BiGRU.
     }
 \end{frame}
+
